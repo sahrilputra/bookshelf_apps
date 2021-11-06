@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf App</title>
+    <link rel="stylesheet" href="./css/jumbrotonStyle.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+        </style>
+</head>
+<body>
+    <header class="header-jumbroton">
+        <div class="jumbroton">
+           <div class="text-toper">
+            <h1 class="textTop">BOOKSHELF <br>APP</h1>
+            <hr id="garis1">
+            <hr id="garis2">
+            <p class="textEntire">BUILD AND MANAGE YOUR BOOK</p>
+            
+           </div>
+           <div class="navigasi">
+            <nav>
+                <ul class="ulNav">
+                    <li class="listNav"><a href="#out" class="navA">List Book</a></li>
+                    <li class="listNav"> / </li>
+                    <li class="listNav"><a href="#search-buku" class="navA">Search</a></li>
+                </ul>
+            </nav>
+           </div>
+           <div class="navAddBook">
+               <a href="#idsectionInp" class="addNav"></a>
+           </div>
+        </div>
+        <hr id="garis3">
+    </header>
+
+    <main>
+        <section class="inputSection" id="idsectionInp">
+            <h2 id="textInp">ADD NEW BOOK</h2>
+            <div class="inp">
+                <form action="#" id="form">
+                    <div class="input">
+                        <label for="inputBookTitle">Book Tittle :</label>
+                        <input id="inputBookTitle" class="input-list" type="text" maxlength="50" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Author :</label>
+                        <input id="inputBookAuthor" class="input-list" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Release Year :</label>
+                        <input id="inputBookYear" class="input-list" type="number" maxlength="4" required>
+                    </div>
+                    <div class="input_inline">
+                        <input id="checkBook" type="checkbox"> <span id="check-text">I already read this book</span>
+                    </div>
+                    <button id="bookSubmit" type="submit">Submit</button>
+                    <div class="layer-submit"></div>
+                </form>
+            </div>
+        </section>
+
+        <section id="search-buku">
+            <h2 class="text-search">Search Book</h2>
+            <form id="form-search-buku" action="#" class="form">
+                <div class="form-group">
+                    <input class="form-input" type="text" id="input-search" name="search"
+                        placeholder="search...">
+                </div>
+                <button type="submit" class="btn-search">Search</button>
+                <p>Note: Clear the search field and click search to display all the books list.</p>
+            </form>
+        </section>
+
+        <section class="output" id="out">
+            <div class="output-list" id="uncompleted-list">
+                <h3 class="output-head">Uncompleted <br>List</h3>
+                <div class="booklist" id="uncompletedBook">
+                </div>
+            </div>
+            <div class="output-list" id="completed_list">
+                <h3 class="output-head">Completed <br>List</h3>
+                <div class="booklist" id="completedBook">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrap-edit">
+        <section class="edit-section">
+            <h2 id="editText">EDIT BOOK</h2>
+            <div class="edit">
+                <form action="#" id="form-edit">
+                    <div class="input-edit" id="edit-id-wrap">
+                        <label for="edit-id" class="edit-text-list">id:</label>
+                        <input id="edit-id" class="edit-list" type="text">
+                    </div>
+                    <div class="input-edit">
+                        <label for="edit-judul" class="edit-text-list" >New Tittle :</label>
+                        <input id="edit-judul" class="edit-list" type="text">
+                    </div>
+                    <div class="input-edit">
+                        <label for="edit-penulis" class="edit-text-list">New Author :</label>
+                        <input id="edit-penulis" class="edit-list" type="text">
+                    </div>
+                    <div class="input-edit">
+                        <label for="edit-tahun" class="">New Release Year :</label>
+                        <input id="edit-tahun" class="edit-list" type="number">
+                    </div>
+                    <div class="btn-edit-wrapper">
+                        <button type="submit" class="edit-submit">Simpan</button>
+                        <button class="edit-cancel">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+        <section class="notif-delete">
+                <div class="notif-card">
+                    <img src="./icon/check_circle_black_24dp (1).svg" alt="suscess" class="icon-notif">
+                    <h4 id="text-notif">Book has been deleted</h4>
+                    <button id="notif-oke">Oke</button>
+                </div>
+        </section>
+    </main>
+
+    <script src="./Js/data.js"></script>
+    <script src="./Js/Dom.js"></script>
+    <script src="./Js/script.js"></script>
+</body>
+</html>
